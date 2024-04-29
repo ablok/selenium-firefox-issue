@@ -1,0 +1,20 @@
+{
+  "name": "selenium-firefox-issue",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test.js",
+    
+    "pretest:grid": "docker-compose up -d --wait",
+    "test:grid": "GRID=true mocha test.js || :",
+    "posttest:grid": "docker-compose down --remove-orphans"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mocha": "^10.4.0",
+    "selenium-webdriver": "^4.20.0"
+  }
+}
