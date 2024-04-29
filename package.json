@@ -8,7 +8,7 @@
     
     "pretest:grid": "docker-compose up -d --wait",
     "test:grid": "GRID=true mocha test.js || :",
-    "posttest:grid": "docker-compose down --remove-orphans"
+    "posttest:grid": "docker-compose logs --no-color --timestamps > docker-compose.log && docker-compose down --remove-orphans"
   },
   "keywords": [],
   "author": "",
